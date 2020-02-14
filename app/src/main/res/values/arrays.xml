@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="burclar">
+        <item >Koç</item>
+        <item >Boğa</item>
+        <item >İkizler</item>
+        <item >Yengeç</item>
+        <item >Aslan</item>
+        <item >Başak</item>
+        <item >Terazi</item>
+        <item >Akrep</item>
+        <item >Yay</item>
+        <item >Oğlak</item>
+        <item >Kova</item>
+        <item >Balık</item>
+    </string-array>
+
+<string-array name="burctarihleri">
+
+    <item>21 Mart - 20 Nisan</item>
+    <item>21 Nisan - 21 Mayıs</item>
+    <item>22 Mayıs - 21 Haziran</item>
+    <item>22 Haziran - 22 Temmuz</item>
+    <item>23 Temmuz - 23 Ağustos</item>
+    <item>24 Ağustos - 23 Eylül</item>
+    <item>24 Eylül - 23 Ekim</item>
+    <item>24 Ekim - 22 Kasım</item>
+    <item>23 Kasım - 21 Aralık</item>
+    <item>22 Aralık - 20 Ocak</item>
+    <item>21 Ocak - 22 Şubat</item>
+    <item>23 Şubat - 20 Mart</item>
+
+
+</string-array>
+
+
+</resources>
