@@ -12,26 +12,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var signs = resources.getStringArray(R.array.burclar)
-        var signDate = resources.getStringArray(R.array.burctarihleri)
-        var signImages = arrayOf(
-            R.drawable.aries,
-            R.drawable.taurus,
-            R.drawable.gemini,
-            R.drawable.cancer,
-            R.drawable.leo,
-            R.drawable.virgo,
-            R.drawable.libra,
-            R.drawable.scorpio,
-            R.drawable.sagittarius,
-            R.drawable.capricorn,
-            R.drawable.aquarius,
-            R.drawable.pisces
-        )
+
 
         // var myAdapter = ArrayAdapter<String>(this,R.layout.teksatir,R.id.tvSignName,signs)
-        var myAdapter =
-            SignArrayAdapter(this, R.layout.teksatir, R.id.tvSignName, signs, signDate, signImages)
+
+        var myAdapter = SignsBaseAdapter(this)
         listSigns.adapter = myAdapter
     }
 }
