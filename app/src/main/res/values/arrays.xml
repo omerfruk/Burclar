@@ -30,6 +30,23 @@
     <item>21 Ocak - 22 Şubat</item>
     <item>23 Şubat - 20 Mart</item>
 
+</string-array>
+
+
+<string-array name="burcozellikleri">
+
+  <item>aries</item>
+    <item>taurus</item>
+    <item>gemini</item>
+    <item>cancer</item>
+    <item>leo</item>
+    <item>virgo</item>
+    <item>libra</item>
+    <item>scorpio</item>
+    <item>sagittarius</item>
+    <item>capricorn</item>
+    <item>aquarius</item>
+    <item>pisces</item>
 
 </string-array>
 

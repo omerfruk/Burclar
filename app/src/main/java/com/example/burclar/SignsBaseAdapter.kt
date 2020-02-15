@@ -10,7 +10,7 @@ import android.widget.TextView
 import kotlinx.android.synthetic.main.teksatir.view.*
 import java.util.zip.Inflater
 
-class SignsBaseAdapter(context: Context):BaseAdapter() {
+class SignsBaseAdapter(context: Context,allSignsData:ArrayList<Signs>):BaseAdapter() {
     var allSigns :ArrayList<Signs>
     var context :Context
 
@@ -79,9 +79,7 @@ class SignsBaseAdapter(context: Context):BaseAdapter() {
         return allSigns.size
     }
 }
-data class Signs(var signName:String,var signDate:String,var signImage:Int ){
 
-    }
 class ViewHolder2(singleLineView:View){
 
     var signName:TextView
