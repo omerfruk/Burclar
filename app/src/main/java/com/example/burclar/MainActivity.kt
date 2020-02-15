@@ -3,7 +3,6 @@ package com.example.burclar
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ArrayAdapter
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -51,22 +50,22 @@ class MainActivity : AppCompatActivity() {
         )
         var signDetails = resources.getStringArray(R.array.burcozellikleri)
         var signImgBig = arrayOf(
-            R.drawable.ariesBig,
-            R.drawable.taurusBig,
-            R.drawable.geminiBig,
-            R.drawable.cancerBig,
-            R.drawable.leoBig,
-            R.drawable.virgoBig,
-            R.drawable.libraBig,
-            R.drawable.scorpioBig,
-            R.drawable.sagittariusBig,
-            R.drawable.capricornBig,
-            R.drawable.aquariusBig,
-            R.drawable.piscesBig
-            )
+            R.drawable.ariesbig,
+            R.drawable.taurusbig,
+            R.drawable.geminibig,
+            R.drawable.cancerbig,
+            R.drawable.leobig,
+            R.drawable.virgobig,
+            R.drawable.librabig,
+            R.drawable.scorpiobig,
+            R.drawable.sagittariusbig,
+            R.drawable.capricornbig,
+            R.drawable.aquariusbig,
+            R.drawable.piscesbig
+        )
 
         for (i in 0..11) {
-            var arrayAdder = Signs(signs[i], signDate[i], signImages[i], signDetails[i])
+            var arrayAdder = Signs(signs[i], signDate[i], signImages[i], signDetails[i],signImgBig[i])
             allSignsData.add(arrayAdder)
         }
 

@@ -1,6 +1,7 @@
 package com.example.burclar
 
 import android.content.Context
+import android.media.Image
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -16,29 +17,10 @@ class SignsBaseAdapter(context: Context,allSignsData:ArrayList<Signs>):BaseAdapt
 
 
     init {
-        allSigns = ArrayList<Signs>()
+        this.allSigns = allSignsData
         this.context = context
 
-        var signs = context.resources.getStringArray(R.array.burclar)
-        var signDate = context.resources.getStringArray(R.array.burctarihleri)
-        var signImages = arrayOf(
-            R.drawable.aries,
-            R.drawable.taurus,
-            R.drawable.gemini,
-            R.drawable.cancer,
-            R.drawable.leo,
-            R.drawable.virgo,
-            R.drawable.libra,
-            R.drawable.scorpio,
-            R.drawable.sagittarius,
-            R.drawable.capricorn,
-            R.drawable.aquarius,
-            R.drawable.pisces
-        )
-        for (i in 0..11){
-                var arrayAdder = Signs(signs[i],signDate[i],signImages[i])
-                allSigns.add(arrayAdder)
-        }
+
 
     }
 
@@ -86,10 +68,13 @@ class ViewHolder2(singleLineView:View){
     var signDate:TextView
     var signImage:ImageView
 
+
+
     init {
         this.signName = singleLineView.tvSignName
         this.signDate = singleLineView.tvSignDate
         this.signImage=singleLineView.imgSign
+
 
     }
 }
