@@ -8,7 +8,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var allSignsData:ArrayList<Signs>
+    lateinit var allSignsData: ArrayList<Signs>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,13 +18,13 @@ class MainActivity : AppCompatActivity() {
         CallData()
         // var myAdapter = ArrayAdapter<String>(this,R.layout.teksatir,R.id.tvSignName,signs)
 
-        var myAdapter = SignsBaseAdapter(this,allSignsData)
+        var myAdapter = SignsBaseAdapter(this, allSignsData)
         listSigns.adapter = myAdapter
-        
+
         listSigns.setOnItemClickListener { parent, view, position, id ->
 
-            var intent = Intent(this,DetailActivity::class.java)
-            intent.putExtra("position",position)
+            var intent = Intent(this, DetailActivity::class.java)
+            intent.putExtra("position", position)
             startActivity(intent)
         }
     }
@@ -49,8 +49,24 @@ class MainActivity : AppCompatActivity() {
             R.drawable.aquarius,
             R.drawable.pisces
         )
-        for (i in 0..11){
-            var arrayAdder = Signs(signs[i],signDate[i],signImages[i])
+        var signDetails = resources.getStringArray(R.array.burcozellikleri)
+        var signImgBig = arrayOf(
+            R.drawable.ariesBig,
+            R.drawable.taurusBig,
+            R.drawable.geminiBig,
+            R.drawable.cancerBig,
+            R.drawable.leoBig,
+            R.drawable.virgoBig,
+            R.drawable.libraBig,
+            R.drawable.scorpioBig,
+            R.drawable.sagittariusBig,
+            R.drawable.capricornBig,
+            R.drawable.aquariusBig,
+            R.drawable.piscesBig
+            )
+
+        for (i in 0..11) {
+            var arrayAdder = Signs(signs[i], signDate[i], signImages[i], signDetails[i])
             allSignsData.add(arrayAdder)
         }
 
