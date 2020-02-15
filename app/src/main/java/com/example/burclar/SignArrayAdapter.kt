@@ -5,6 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import android.widget.ImageView
+import android.widget.TextView
 import kotlinx.android.synthetic.main.teksatir.view.*
 import java.util.zip.Inflater
 
@@ -17,21 +19,46 @@ class SignArrayAdapter(
     var signImages: Array<Int>
 ) : ArrayAdapter<String>(context, resource, textViewResourceId, signNames) {
 
+
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
+        var singleLineLayout = convertView
+        var viewHolder:ViewHolder?=null
 
-        var inflater = LayoutInflater.from(context)
-        var singleLineLayout = inflater.inflate(R.layout.teksatir, parent, false)
+        if(singleLineLayout == null){
 
-        var sign_name = singleLineLayout.tvSignName
-        var sign_date = singleLineLayout.tvSignDate
-        var sign_img = singleLineLayout.imgSign
+            var inflater = LayoutInflater.from(context)
+            singleLineLayout = inflater.inflate(R.layout.teksatir, parent, false)
 
-        sign_name.setText(signNames[position])
-        sign_date.setText(signDates[position])
-        sign_img.setImageResource(signImages[position])
+            viewHolder = ViewHolder(singleLineLayout)
+            singleLineLayout.tag = viewHolder
+
+        }
+        else {
+
+            viewHolder = singleLineLayout.getTag() as ViewHolder
+        }
+
+        viewHolder.signName?.setText(signNames[position])
+        viewHolder.signDate?.setText(signDates[position])
+        viewHolder.imageSign?.setImageResource(signImages[position])
 
 
-        return singleLineLayout
+        return singleLineLayout!!
+
+
+    }
+
+
+    class ViewHolder(singleLinelayout:View){
+        var signName :TextView
+        var signDate :TextView
+        var imageSign :ImageView
+
+        init {
+             signName = singleLinelayout.tvSignName
+             signDate = singleLinelayout.tvSignDate
+             imageSign = singleLinelayout.imgSign
+        }
 
     }
 }
