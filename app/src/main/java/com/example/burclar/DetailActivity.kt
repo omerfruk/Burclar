@@ -11,7 +11,8 @@ class DetailActivity : AppCompatActivity() {
         setContentView(R.layout.activity_detail)
 
         var position = intent.extras?.get("position")
-        Toast.makeText(this, "position : "+   position,Toast.LENGTH_LONG).show()
+        var allSignsData = intent.extras!!.get("allSignsData") as ArrayList<Signs>
+        Toast.makeText(this, "position : "+ position+"All"+allSignsData.size,Toast.LENGTH_LONG).show()
 
     }
 }

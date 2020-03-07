@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
 
             var intent = Intent(this, DetailActivity::class.java)
             intent.putExtra("position", position)
+            intent.putExtra("allSignsData",allSignsData)
             startActivity(intent)
         }
     }
