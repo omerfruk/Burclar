@@ -35,7 +35,17 @@
 
 <string-array name="burcozellikleri">
 
-  <item>aries</item>
+  <item>
+      <b>Aries\n</b>
+  <p> Element: Fire\n
+Quality: Cardinal\n
+Color: Red\n
+Day: Tuesday\n
+Ruler: Mars\n
+Greatest Overall Compatibility: Libra, Leo\n
+Lucky Numbers: 1, 8, 17\n
+Date range: March 21 - April 19 </p>
+  </item>
     <item>taurus</item>
     <item>gemini</item>
     <item>cancer</item>
